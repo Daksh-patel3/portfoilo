@@ -1,0 +1,785 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #eee;
+    background-color: #121212;
+    margin: 0;
+    padding: 0;
+}
+
+.headline {
+    font-size: 3em;
+    animation: fadeIn 2s ease-in;
+}
+
+/* Home Section Styling */
+.home-section {
+    height: 100vh; /* Full height */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center; /* Center text */
+    position: relative; /* To position overlay */
+    overflow: hidden; /* Prevent overflow */
+    background-color: #0b1c3d; /* Midnight blue background */
+}
+
+/* Background Overlay */
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Darker overlay for contrast */
+    z-index: 1; /* Behind content */
+}
+
+/* Home Content Styling */
+.home-content {
+    position: relative; /* Position relative to overlay */
+    z-index: 2; /* In front of overlay */
+}
+
+/* Content Card */
+.content-card {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent dark card */
+    border-radius: 20px; /* Rounded corners */
+    padding: 40px; /* Padding for the card */
+    max-width: 600px; /* Max width for the card */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Soft shadow for card */
+    transition: transform 0.3s ease; /* Smooth transform on hover */
+}
+
+/* Card Hover Effect */
+.content-card:hover {
+    transform: translateY(-10px); /* Lift effect */
+}
+
+/* Headline Styling */
+.headline {
+    font-size: 3em; /* Large headline */
+    margin-bottom: 20px;
+    color: #00bcd4; /* Bright cyan for accent */
+    animation: fadeInUp 1s ease-out; /* Fade-up animation */
+}
+
+/* Highlighted Text */
+.highlight {
+    color: #ff4081; /* Vibrant magenta for highlighting */
+}
+
+/* Subheadline Styling */
+.subheadline {
+    font-size: 2em; /* Subheadline size */
+    margin-bottom: 15px;
+    color: #00bcd4; /* Bright cyan for accent */
+}
+
+/* Dynamic Text Animation */
+.dynamic-text {
+    display: inline-block; /* Inline block for animation */
+    animation: typing 4s steps(30, end) infinite alternate; /* Typing animation */
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid #ff4081; /* Cursor effect */
+}
+
+/* Description Styling */
+.description {
+    font-size: 1.2em; /* Description size */
+    margin-bottom: 25px; /* Space below description */
+    line-height: 1.6; /* Improve readability */
+    color: #e0e0e0; /* Light gray for description */
+}
+
+/* CTA Button Styling */
+.cta-button {
+    background-color: #ff4081; /* Button background */
+    color: #ffffff; /* Button text color */
+    padding: 12px 25px; /* Padding for the button */
+    border-radius: 30px; /* Rounded button */
+    font-weight: bold;
+    font-size: 1.1em; /* Button text size */
+    text-decoration: none;
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Hover Effect for Button */
+.cta-button:hover {
+    background-color: #e91e63; /* Slightly darker on hover */
+    transform: scale(1.05); /* Slight scale effect */
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .headline {
+        font-size: 2.5em; /* Smaller on mobile */
+    }
+    .subheadline {
+        font-size: 1.5em; /* Smaller on mobile */
+    }
+    .description {
+        font-size: 1em; /* Smaller on mobile */
+    }
+}
+
+
+
+/* About Me Section Styling */
+.about-section {
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient background */
+    color: #f0f0f0; /* Light text color for contrast */
+    padding: 80px 20px; /* Ample padding for aesthetics */
+    text-align: center; /* Center-aligning text */
+    position: relative; /* Position for pseudo-elements */
+}
+
+/* About Container */
+.about-container {
+    max-width: 1200px; /* Container width */
+    margin: 0 auto; /* Centering container */
+    overflow: hidden; /* Hide overflow for animations */
+}
+
+/* About Title */
+.about-title {
+    font-size: 3.5em; /* Title size */
+    margin-bottom: 40px; /* Spacing below title */
+    color: #ffffff; /* White color for title */
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    animation: fadeIn 1s ease; /* Fade in animation */
+}
+
+/* About Content Styling */
+.about-content {
+    display: flex; /* Flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping of elements */
+    justify-content: space-around; /* Spacing around items */
+    animation: slideIn 1s ease-in-out; /* Slide in effect */
+}
+
+/* About Description */
+.about-description {
+    flex: 1; /* Flex basis for responsiveness */
+    padding: 20px; /* Inner padding */
+    max-width: 600px; /* Limit width for better readability */
+    border-radius: 15px; /* Rounded corners */
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    transition: transform 0.3s ease; /* Transition for hover */
+}
+
+/* About Description Hover Effect */
+.about-description:hover {
+    transform: translateY(-10px); /* Lift on hover */
+}
+
+/* Skills Section */
+.about-skills {
+    flex: 1; /* Flex basis for responsiveness */
+    padding: 20px; /* Inner padding */
+    max-width: 400px; /* Limit width */
+    border-radius: 15px; /* Rounded corners */
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    transition: transform 0.3s ease; /* Transition for hover */
+}
+
+/* Skills Section Hover Effect */
+.about-skills:hover {
+    transform: translateY(-10px); /* Lift on hover */
+}
+
+/* Skills Title */
+.skills-title {
+    font-size: 1.8em; /* Title size */
+    margin-bottom: 15px; /* Space below title */
+    color: #ffffff; /* White color */
+}
+
+/* Skills List */
+.skills-list {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+    animation: fadeIn 1.5s ease; /* Fade in effect */
+}
+
+/* Skills List Item */
+.skills-list li {
+    background: #ff7675; /* Skill background color */
+    color: #ffffff; /* Skill text color */
+    padding: 10px; /* Padding */
+    margin: 5px 0; /* Margin for spacing */
+    border-radius: 5px; /* Rounded corners */
+    transition: transform 0.3s; /* Transition for hover effect */
+}
+
+/* Skills List Item Hover Effect */
+.skills-list li:hover {
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+/* Animation Text */
+.animation-text {
+    font-size: 2em; /* Animation text size */
+    margin-top: 40px; /* Space above */
+    color: #ffffff; /* White color */
+    animation: pulse 2s infinite; /* Pulsating animation */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+
+
+h1, h2 {
+    color: #4CAF50;
+}
+
+section{
+    text-align: center;
+}
+
+/* Projects Section Styling */
+.projects-section {
+    background-color: #282c34; /* Dark background for contrast */
+    padding: 80px 20px; /* Padding for the section */
+    color: #ffffff; /* White text for visibility */
+    text-align: center; /* Center text alignment */
+}
+
+/* Projects Container */
+.projects-container {
+    max-width: 1200px; /* Max width for the container */
+    margin: 0 auto; /* Center the container */
+}
+
+/* Section Title Styling */
+.section-title {
+    font-size: 3em; /* Title size */
+    margin-bottom: 40px; /* Space below title */
+    color: #ff6f61; /* Soft coral color */
+    text-shadow: 0 4px 20px rgba(255, 111, 97, 0.5); /* Shadow effect */
+    animation: slideIn 1s ease-in-out; /* Slide-in animation */
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive columns */
+    gap: 30px; /* Space between project cards */
+}
+
+/* Project Card Styling */
+.project-card {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent card background */
+    padding: 20px; /* Padding inside card */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Deep shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for hover effects */
+    position: relative; /* Position for animations */
+    overflow: hidden; /* Overflow hidden for effects */
+    animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+}
+
+/* Project Card Hover Effect */
+.project-card:hover {
+    transform: translateY(-5px) scale(1.03); /* Slight lift and scaling effect */
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4); /* Darker shadow on hover */
+}
+
+/* Project Title Styling */
+.project-title {
+    font-size: 1.8em; /* Title size */
+    color: #ff6f61; /* Title color */
+    margin-bottom: 10px; /* Space below title */
+    position: relative; /* Position for animation */
+    animation: bounce 1.5s infinite; /* Continuous bounce effect */
+}
+
+/* Project Description Styling */
+.project-description {
+    font-size: 1em; /* Description size */
+    margin-bottom: 15px; /* Space below description */
+}
+
+/* Technologies List Styling */
+.technologies {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: center; /* Center technologies */
+    flex-wrap: wrap; /* Wrap technologies if needed */
+}
+
+.technologies li {
+    background: #ff6f61; /* Bright coral background */
+    color: #ffffff; /* White text */
+    padding: 5px 15px; /* Padding for tech items */
+    border-radius: 5px; /* Rounded corners */
+    margin: 5px; /* Margin for spacing */
+    transition: transform 0.3s; /* Transition for hover effect */
+}
+
+.technologies li:hover {
+    transform: scale(1.1); /* Scale effect on hover */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+/* General Section Styling */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+
+
+.section-title {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #00f5a0;
+}
+
+/* Internship Section Styling */
+.internship-section {
+    background-color: #2c3e50; /* Darker background for sophistication */
+    padding: 80px 20px; /* Ample padding for aesthetics */
+    color: #ecf0f1; /* Light text color for contrast */
+    text-align: center; /* Center-aligning text */
+}
+
+/* Internship Container */
+.internship-container {
+    max-width: 1200px; /* Container width */
+    margin: 0 auto; /* Centering container */
+}
+
+/* Section Title */
+.section-title {
+    font-size: 3em; /* Title size */
+    margin-bottom: 40px; /* Spacing below title */
+    color: #e67e22; /* Bright orange color */
+    text-shadow: 0 4px 20px rgba(231, 126, 34, 0.5); /* Shadow for depth */
+    animation: fadeInUp 1s ease; /* Fade in with upward motion */
+}
+
+/* Internship Content Styling */
+.internship-content {
+    display: flex; /* Flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping of elements */
+    justify-content: space-around; /* Spacing around items */
+    animation: slideIn 1s ease-in-out; /* Slide in effect */
+}
+
+/* Internship Description */
+.internship-description {
+    flex: 1; /* Flex basis for responsiveness */
+    padding: 20px; /* Inner padding */
+    max-width: 600px; /* Limit width for better readability */
+    border-radius: 15px; /* Rounded corners */
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    transition: transform 0.3s ease; /* Transition for hover */
+}
+
+/* Internship Description Hover Effect */
+.internship-description:hover {
+    transform: translateY(-10px); /* Lift on hover */
+}
+
+/* Role Title */
+.role-title {
+    font-size: 1.8em; /* Role title size */
+    color: #e67e22; /* Role title color */
+    margin-bottom: 15px; /* Space below title */
+}
+
+/* Internship Details */
+.internship-details {
+    font-size: 1.1em; /* Description font size */
+    margin-bottom: 15px; /* Space below description */
+}
+
+/* Technologies Used */
+.technologies-used {
+    font-weight: bold; /* Bold for emphasis */
+}
+
+/* Skills Section */
+.internship-skills {
+    flex: 1; /* Flex basis for responsiveness */
+    padding: 20px; /* Inner padding */
+    max-width: 400px; /* Limit width */
+    border-radius: 15px; /* Rounded corners */
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    transition: transform 0.3s ease; /* Transition for hover */
+}
+
+/* Skills Section Hover Effect */
+.internship-skills:hover {
+    transform: translateY(-10px); /* Lift on hover */
+}
+
+/* Skills Title */
+.skills-title {
+    font-size: 1.5em; /* Title size */
+    margin-bottom: 15px; /* Space below title */
+}
+
+/* Skills List */
+.skills-list {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+    animation: fadeIn 1.5s ease; /* Fade in effect */
+}
+
+/* Skills List Item */
+.skills-list li {
+    background: #e67e22; /* Skill background color */
+    color: #ffffff; /* Skill text color */
+    padding: 10px; /* Padding */
+    margin: 5px 0; /* Margin for spacing */
+    border-radius: 5px; /* Rounded corners */
+    transition: transform 0.3s; /* Transition for hover effect */
+}
+
+/* Skills List Item Hover Effect */
+.skills-list li:hover {
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+/* Contact Section Styling */
+#contact {
+    padding: 60px 20px;
+    color: #fff;
+    background-color: #1e3c72; /* Gradient background */
+    text-align: center;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #00f5a0; /* Title color */
+}
+
+/* Contact Container */
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+    background-color: #333; /* Background for the contact section */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+/* Contact Links */
+.contact-links {
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    gap: 15px; /* Space between links */
+    margin: 20px 0; /* Margin for spacing */
+}
+
+/* Individual Link Style */
+.contact-link {
+    text-decoration: none; /* Remove underline */
+    color: #00f5a0; /* Link color */
+    font-size: 1.2em; /* Font size for links */
+    padding: 10px 15px; /* Padding for clickable area */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #444; /* Background color for link */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+/* Hover Effect for Links */
+.contact-link:hover {
+    background-color: #00f5a0; /* Change background on hover */
+    color: #121212; /* Change text color on hover */
+    transform: scale(1.05); /* Slightly enlarge */
+}
+
+/* Font Awesome Icons (Optional) */
+.fab {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+
+
+
+
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+    background-color: #e9ecef; /* Light background color */
+}
+
+/* Header Styles */
+.header {
+    background: #343a40; /* Dark background for header */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensuring it's on top */
+}
+
+.header .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.header .nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.header .nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.header .nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.header .nav ul li a:hover {
+    color: #ff7675; /* Change color on hover */
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+    transition: opacity 0.3s ease;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+
+.cta-button {
+    background: #ff7675; /* Call to action color */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: #ff3d47; /* Darker shade on hover */
+}
+
+/* Blog Posts Section */
+.blog-posts {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.blog-posts h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.post-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.post-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    width: 300px;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.post-card img {
+    border-radius: 15px 15px 0 0; /* Rounded corners on top */
+    width: 100%; /* Full width */
+    height: 200px; /* Set a fixed height */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+.post-card h3 {
+    padding: 15px;
+    font-size: 1.5em;
+}
+
+.post-card p {
+    padding: 0 15px 15px;
+}
+
+/* Tags */
+.tags {
+    display: block;
+    padding: 0 15px 15px;
+    color: #6c757d;
+}
+
+/* Footer Styles */
+.footer {
+    background: #343a40;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.footer-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+}
+
+.social-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.social-links li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links li a:hover {
+    color: #ff7675; /* Change color on hover */
+}
+
+/* Newsletter Form */
+.newsletter {
+    margin-top: 20px;
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+}
+
+.newsletter button {
+    padding: 10px 15px;
+    background: #ff7675; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.newsletter button:hover {
+    background: #ff3d47; /* Darker shade on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .post-cards {
+        flex-direction: column; /* Stack cards vertically on small screens */
+        align-items: center; /* Center the cards */
+    }
+
+    .post-card {
+        width: 90%; /* Full width on mobile */
+    }
+
+    .hero h1 {
+        font-size: 2.5em; /* Adjust hero text size on small screens */
+    }
+
+    .hero p {
+        font-size: 1.2em; /* Adjust hero paragraph size */
+    }
+}
